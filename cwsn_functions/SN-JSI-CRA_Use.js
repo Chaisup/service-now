@@ -7,6 +7,7 @@ Name: CRA_Use												By: Chaisup Wongsaroj		Version: 2.0
 -----------------------------------------------------------------------------------------------------
 
 This function is to use PA Script to call another function for reporting purpose.
+To use the feature of 'cwsn_scripts', this function must be installed in the instance.
 The defined function in PA Script must be named as 'CRA_JSF', 'CRA_JSC', or 'CRA_JSO' only.
 	'CRA_JSF' is for all users to make an advanced filter with a JavaScript function.
 	'CRA_JSC' is for PA users to build a field calculation on a job, metric, or business rule.
