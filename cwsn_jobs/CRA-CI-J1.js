@@ -1,7 +1,7 @@
 `*/ Metadata
 -------------------------------------------------------------------------------------------------------------------------
 Name : CRA-CI-J1 Run ETL
-Run : Daily - 00:20:00 GMT
+Run : Weekly - Monday - 00:30:00 GMT
 Relative : 0 months ago - 0 months ago
 
 
@@ -653,7 +653,11 @@ function processData(z_recal) {
 	// Sub Calculation : Code Q1 : Location
 	function calCodeQ1() {
 		// Without Scope
-		return 'Q1'+z['13'].substr(2,1); // Same as Code 13
+		if(ci.ref_cmdb_ci_netgear.device_type.getDisplayValue() != 'Circuit') { // Exclude (Device Type = Circuit)
+			return 'Q1'+z['13'].substr(2,1); // Same as Code 13
+		} else {
+			return 'Q1o';
+		}
 	}
 
 	// Sub Calculation : Code Q2 : Business Service
@@ -1184,4 +1188,5 @@ function inList(Arr, value) {
 	}
 	return false;
 }
+
 
